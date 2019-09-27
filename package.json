@@ -4,8 +4,10 @@
   "description": "Some description",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec babel-node server/index.js",
-    "test": "NODE_ENV=test mocha  --require @babel/register server/*.spec.js --exit"
+    "start": "node dist/index.js",
+    "dev": "nodemon --exec babel-node server/index.js",
+    "test": "NODE_ENV=test mocha  --require @babel/register server/*.spec.js --exit",
+    "build": "babel server -d dist"
   },
   "repository": {
     "type": "git",
@@ -18,16 +20,17 @@
   },
   "homepage": "https://github.com/mukunzidd/dryrun#readme",
   "dependencies": {
-    "@babel/cli": "^7.6.2",
-    "@babel/core": "^7.6.2",
-    "@babel/node": "^7.6.2",
-    "@babel/preset-env": "^7.6.2",
-    "@babel/register": "^7.6.2",
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
     "express": "^4.17.1",
     "mocha": "^6.2.0",
-    "nodemon": "^1.19.2"
+    "@babel/register": "^7.6.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/node": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "nodemon": "^1.19.2"
+  }
 }
