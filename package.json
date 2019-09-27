@@ -4,8 +4,8 @@
   "description": "Some description",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test mocha  --require @babel/register server/*.spec.js --exit",
-    "dev": "nodemon --exec babel-node server/index.js"
+    "start": "nodemon --exec babel-node server/index.js",
+    "test": "NODE_ENV=test mocha  --require @babel/register server/*.spec.js --exit"
   },
   "repository": {
     "type": "git",
@@ -26,9 +26,8 @@
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
     "express": "^4.17.1",
-    "mocha": "^6.2.0"
-  },
-  "devDependencies": {
+    "mocha": "^6.2.0",
     "nodemon": "^1.19.2"
-  }
+  },
+  "devDependencies": {}
 }
