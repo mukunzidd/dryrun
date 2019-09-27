@@ -30,8 +30,8 @@ app.get('/users', (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log('App listening on PORT 3k');
+app.listen(process.env.PORT || 5000, () => {
+  console.log('App listening on PORT 5k');
 });
 
 export default app;
